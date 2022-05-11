@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1770752276088728430}
   - component: {fileID: 1770752276088728210}
   - component: {fileID: 1770752276088728209}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Mover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1770752276088728431}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0.6, z: -16}
-  m_LocalScale: {x: 1.5, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -111,11 +111,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc2bfe27adb656946be0b11ecfe43734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.25
+  speed: 0.4
   rotation: 6
   raycastMask:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 64
+  network:
+    fitness: 0
+  distance: 100
   position: 0
   collided: 0
   collisionTag: rail

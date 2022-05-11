@@ -1,24 +1,23 @@
 ﻿using System.Collections.Generic;
 using System;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using UnityEngine;
 
+[Serializable]
 public class NeuralNetwork : IComparable<NeuralNetwork>
 {
     //fundamental 
-    private int[] layers;//layers
-    private float[][] neurons;//neurons
-    private float[][] biases;//biasses
-    private float[][][] weights;//weights
-    private int[] activations;//layers
+    private int[] layers;
+    private float[][] neurons;
+    private float[][] biases;
+    private float[][][] weights;
+    private int[] activations;
 
     //genetic
     public float fitness = 0;//fitness
     
-
-    private float[][] deltaBiases;//biasses
-    private float[][][] deltaWeights;//weights
-    private int deltaCount;
 
     public NeuralNetwork(int[] layers, string[] layerActivations)
     {
@@ -222,6 +221,7 @@ public class NeuralNetwork : IComparable<NeuralNetwork>
             {
                 for (int j = 0; j < biases[i].Length; j++)
                 {
+                    Debug.Log(float.Parse(ListLines[index]));
                     biases[i][j] = float.Parse(ListLines[index]);
                     index++;
                 }
@@ -232,7 +232,8 @@ public class NeuralNetwork : IComparable<NeuralNetwork>
                 for (int j = 0; j < weights[i].Length; j++)
                 {
                     for (int k = 0; k < weights[i][j].Length; k++)
-                    {
+                    {   
+                        Debug.Log(float.Parse(ListLines[index]));
                         weights[i][j][k] = float.Parse(ListLines[index]); ;
                         index++;
                     }

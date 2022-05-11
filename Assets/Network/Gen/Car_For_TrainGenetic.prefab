@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 637590026681539272}
   - component: {fileID: 8251711061551429410}
   - component: {fileID: 8435719649871449891}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: detail_fenderSquare_32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 4874351564526315031}
   - component: {fileID: 5081405517089881344}
   - component: {fileID: 6877758712160789948}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: detail_exhaustVertical_39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 710310211845225754}
   - component: {fileID: 5542847901579075003}
   - component: {fileID: 5518968582829818122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BoostParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5039,7 +5039,7 @@ GameObject:
   - component: {fileID: 1914167271186289060}
   - component: {fileID: 8842718430116041373}
   - component: {fileID: 2464355816911397532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FLWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5138,7 +5138,7 @@ GameObject:
   - component: {fileID: 7102558419682711658}
   - component: {fileID: 9096196077030529233}
   - component: {fileID: 150806390056565564}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_dirt_42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5222,7 +5222,7 @@ GameObject:
   - component: {fileID: 498171787992875209}
   - component: {fileID: 7654703619575124052}
   - component: {fileID: 8172070656825026971}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: detail_fenderSquare_34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5319,7 +5319,7 @@ GameObject:
   - component: {fileID: 5132867901395825423}
   - component: {fileID: 7034787766936555610}
   - component: {fileID: 2685633530388872539}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ExhaustSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10151,7 +10151,7 @@ GameObject:
   - component: {fileID: 6882183275256886595}
   - component: {fileID: 8823782732644386869}
   - component: {fileID: 6222221956100950595}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: detail_fenderSquare_33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10249,7 +10249,7 @@ GameObject:
   - component: {fileID: 5308520521141611063}
   - component: {fileID: 7883510713661831404}
   - component: {fileID: 2470735201583940415}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: windshield_truck_28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10347,7 +10347,7 @@ GameObject:
   - component: {fileID: 950375311867254287}
   - component: {fileID: 4794566037896968077}
   - component: {fileID: 3167236099001136492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: detail_fenderSquare_31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10442,7 +10442,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1646146375590164090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10486,7 +10486,7 @@ GameObject:
   - component: {fileID: 4244137100388117824}
   - component: {fileID: 2162099947416201352}
   - component: {fileID: 7885512662478986684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ExhaustSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15318,7 +15318,7 @@ GameObject:
   - component: {fileID: 4859654117818609542}
   - component: {fileID: 5040828077867458504}
   - component: {fileID: 3423732502437211003}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: detail_rollbar_35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15413,7 +15413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3658468963758527644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CenterOfMass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15447,7 +15447,7 @@ GameObject:
   - component: {fileID: 2085073993558317933}
   - component: {fileID: 3118074337961304024}
   - component: {fileID: 8116115561284446416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BRWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15547,7 +15547,7 @@ GameObject:
   - component: {fileID: 5813595612924475639}
   - component: {fileID: 5296578678108906946}
   - component: {fileID: 6872310443710887748}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Car_For_TrainGenetic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15593,7 +15593,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &5296578678108906946
 MonoBehaviour:
@@ -15689,7 +15689,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   diffGearing: 10
-  brakeForce: 2000
+  brakeForce: 3000
   steerAngle: 30
   steerSpeed: 0.2
   jumpVel: 1.1
@@ -15703,7 +15703,7 @@ MonoBehaviour:
   - {fileID: 2162099947416201352}
   allowBoost: 1
   maxBoost: 12
-  boost: 12
+  boost: 10.64
   boostRegen: 0.2
   boostForce: 10000
   boosting: 0
@@ -15729,11 +15729,15 @@ MonoBehaviour:
   rotation: 6
   raycastMask:
     serializedVersion: 2
-    m_Bits: 2147483647
-  collisionTag: rail
-  checkpointTag: checkpoint
+    m_Bits: 64
+  network:
+    fitness: 0
+  distance: 100
   position: 0
   collided: 0
+  winner: 0
+  collisionTag: rail
+  checkpointTag: checkpoint
 --- !u!1 &5546083620422934418
 GameObject:
   m_ObjectHideFlags: 0
@@ -15745,7 +15749,7 @@ GameObject:
   - component: {fileID: 2474593300606921898}
   - component: {fileID: 511041164443897092}
   - component: {fileID: 6784052745439502997}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_dirt_42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15829,7 +15833,7 @@ GameObject:
   - component: {fileID: 7531724039607365291}
   - component: {fileID: 812527173433799502}
   - component: {fileID: 2195929615848145739}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BLWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15930,7 +15934,7 @@ GameObject:
   - component: {fileID: 1232950168852022317}
   - component: {fileID: 7623289393174580991}
   - component: {fileID: 6867536049646590926}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: hood_default_29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16040,7 +16044,7 @@ GameObject:
   - component: {fileID: 3978364517484611845}
   - component: {fileID: 532150143876288857}
   - component: {fileID: 2030554788291964979}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_dirt_42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16123,7 +16127,7 @@ GameObject:
   - component: {fileID: 3334407563566817872}
   - component: {fileID: 4590887110868742501}
   - component: {fileID: 7496755757804824791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BoostParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20954,7 +20958,7 @@ GameObject:
   - component: {fileID: 5103783640748573179}
   - component: {fileID: 3806194215624886657}
   - component: {fileID: 8936944421674298107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_dirt_42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21038,7 +21042,7 @@ GameObject:
   - component: {fileID: 7049397323280809007}
   - component: {fileID: 2171771935466522498}
   - component: {fileID: 6367932709809595055}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: detail_exhaustVertical_38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21136,7 +21140,7 @@ GameObject:
   - component: {fileID: 3653122519105506977}
   - component: {fileID: 7360239776952669948}
   - component: {fileID: 1700506156487396226}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: trunk_bed_30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21234,7 +21238,7 @@ GameObject:
   - component: {fileID: 2837590075260807347}
   - component: {fileID: 5735481980556384423}
   - component: {fileID: 2040671522123355494}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: detail_engine_36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21332,7 +21336,7 @@ GameObject:
   - component: {fileID: 7802789468481720921}
   - component: {fileID: 3577594316298085037}
   - component: {fileID: 4726485805875370621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FRWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

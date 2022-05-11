@@ -8,6 +8,8 @@ TagManager:
   - rail
   - checkpoint
   - CheckPoint
+  - Start
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - Water
   - UI
   - CheckPoint
-  - 
-  - 
+  - GA
+  - BOT
   - 
   - 
   - 

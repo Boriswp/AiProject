@@ -58,7 +58,7 @@ public class CarRacerAgent : Agent
             _tillRouteGenerationCounter = _stepsToRouteRegeneration;
             Generator.TrackLength = (int) Academy.Instance.EnvironmentParameters.GetWithDefault("track_length", 10);
             Generator.TurnRate = Academy.Instance.EnvironmentParameters.GetWithDefault("turn_rate", 0.07f);
-           //Generator.GenerateTrack();
+            Generator.GenerateTrack();
         }
 
         foreach (var item in Generator.SavedCheckpoints)
@@ -158,7 +158,8 @@ public class CarRacerAgent : Agent
     }
     
     private void OnCollisionEnter(Collision collision)
-    {        
+    {
+        if (collision.collider.gameObject.layer == LayerMask.NameToLayer("BOT")) return;
         AddReward(-0.5f);
         collisionCount++;
     }

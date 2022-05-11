@@ -64,12 +64,14 @@ public class Generator : MonoBehaviour
         }
             
         var currentNextPoint = transform;
+        var middleTransform = transform;
         currentNextPoint.position = new Vector3(0f,0f,2f);
         for (int i = 0, tillCheckpointCounter = 0; i < TrackLength; i++, tillCheckpointCounter++)
         {
             if (ShouldNowBeCheckpoint(i, tillCheckpointCounter))
             {
                 tillCheckpointCounter = CreateCheckpointGate(currentNextPoint);
+                CreateCheckpointGate(middleTransform);
             }
 
             var randomRoll = Random.Range(0.0f, 1.0f + TurnRate);
@@ -81,6 +83,7 @@ public class Generator : MonoBehaviour
             var createdSegment = Instantiate(selectedSegment, transform);
           
             var inputTransform = createdSegment.transform.Find("InputPoint");
+            middleTransform = createdSegment.transform.Find("MiddlePoint");
             var outputTransform = createdSegment.transform.Find("OutputPoint");
 
             var rotationAngle = GetCorrectOrientation(currentNextPoint, createdSegment, inputTransform);
@@ -90,7 +93,7 @@ public class Generator : MonoBehaviour
             currentNextPoint = outputTransform;
             SavedObjects.Add(createdSegment);
         }
-        CreateFinishGate(currentNextPoint, TrackLength-1);
+        CreateFinishGate(currentNextPoint);
     }
 
     private GameObject[] DrawRandomPathSegmentTemplate(float randomRoll)
@@ -128,7 +131,7 @@ public class Generator : MonoBehaviour
 
     private bool ShouldNowBeCheckpoint(int i, int tillCheckpointCounter)
     {
-        return tillCheckpointCounter == CheckpointEveryNSegments && i != TrackLength - 1;
+        return tillCheckpointCounter == CheckpointEveryNSegments && i != TrackLength;
     }
 
     private int CreateCheckpointGate(Transform currentNextPoint)
@@ -140,9 +143,8 @@ public class Generator : MonoBehaviour
         return 0;
     }
 
-    private void CreateFinishGate(Transform currentNextPoint, int i)
+    private void CreateFinishGate(Transform currentNextPoint)
     {
-        if (i != TrackLength - 1) return;
         var checkpoint = Instantiate(FinaleTemplate, transform);
         SavedCheckpoints.Add(checkpoint);
         checkpoint.transform.position = currentNextPoint.position;
