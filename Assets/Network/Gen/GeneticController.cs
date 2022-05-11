@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Network.Gen;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GeneticController : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class GeneticController : MonoBehaviour
     public int populationSize;
     public GameObject prefab;
     public GameObject InstantiatePoint;
-    public bool learning = false;
+    public bool isLearning = false;
     public Net net;
    
     [Range(0.0001f, 1f)] public float MutationChance = 0.01f;
@@ -26,7 +27,7 @@ public class GeneticController : MonoBehaviour
 
     void Start()
     {
-        if (!learning) populationSize = 1;
+        if (!isLearning) populationSize = 1;
         InitNetworks();
         InvokeRepeating(nameof(CreateBots), 0.1f, timeframe);
     }
@@ -37,7 +38,7 @@ public class GeneticController : MonoBehaviour
         for (int i = 0; i < populationSize; i++)
         {
             NeuralNetwork network = new NeuralNetwork( net.layers, net.layerActivation);
-            if(!learning){
+            if(!isLearning){
                 network.Load("Assets/Save.txt");
             }
             networks[i]=network;
@@ -49,7 +50,7 @@ public class GeneticController : MonoBehaviour
         Time.timeScale = Gamespeed;
         if (bots != null)
         {
-            if (learning)
+            if (isLearning)
             {
                 SortNetworks();
                 epochCount++;
@@ -64,7 +65,7 @@ public class GeneticController : MonoBehaviour
         bots = new List<Bot>();
         for (int i = 0; i < populationSize; i++)
         {
-            var car = (Instantiate(prefab, InstantiatePoint.transform.position, new Quaternion(0, 0, 0, 0))).GetComponent<Bot>();//create bots
+            var car = (Instantiate(prefab, InstantiatePoint.transform.position, new Quaternion(0, 0, 0, 0))).GetComponent<Bot>();
             car.network = networks[i];
             bots.Add(car);
         }
