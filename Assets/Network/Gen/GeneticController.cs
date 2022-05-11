@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using Network.Gen;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class Manager : MonoBehaviour
+public class GeneticController : MonoBehaviour
 {
 
     public float timeframe;
@@ -79,12 +76,10 @@ public class Manager : MonoBehaviour
         for (int i = 0; i < populationSize; i++)
         {
             bots[i].UpdateFitness();
-            if (bots[i].winner)
-            {
-                bots[i].Save();
-                Debug.Log("Learning End");
-                EditorApplication.ExitPlaymode();
-            }
+            if (!bots[i].winner) continue;
+            bots[i].Save();
+            Debug.Log("Learning End");
+            EditorApplication.ExitPlaymode();
         }
         Array.Sort(networks);
         for (int i = 0; i < populationSize / 2; i++)
