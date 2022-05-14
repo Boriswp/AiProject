@@ -14,7 +14,7 @@ public class Generator : MonoBehaviour
     
 
     [Range(0, 50)]
-    public int CheckpointEveryNSegments = 4;
+    public int CheckpointEveryNSegments = 1;
     
     public GameObject[] StraightTemplateSegments;
     public GameObject[] RightCurveTemplateSegments;

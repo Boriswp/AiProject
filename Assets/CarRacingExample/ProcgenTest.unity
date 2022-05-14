@@ -2279,7 +2279,7 @@ MonoBehaviour:
   populationSize: 100
   prefab: {fileID: 5284979157332578093, guid: 6beafb359928221498d4d0b0c9bbb56e, type: 3}
   InstantiatePoint: {fileID: 920766302}
-  learning: 0
+  isLearning: 0
   net:
     layers: 050000000b0000001700000002000000
     layerActivation:
@@ -20263,6 +20263,10 @@ PrefabInstance:
     - target: {fileID: 2074280101951400682, guid: 4896bd05f58692f42a00283954fa657c, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074280101951400682, guid: 4896bd05f58692f42a00283954fa657c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2074344427524843310, guid: 4896bd05f58692f42a00283954fa657c, type: 3}
       propertyPath: m_Layer
