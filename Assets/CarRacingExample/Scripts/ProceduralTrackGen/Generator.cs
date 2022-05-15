@@ -71,7 +71,7 @@ public class Generator : MonoBehaviour
             if (IsCheckpointPlace(i, tillCheckpointCounter))
             {
                 tillCheckpointCounter = CreateCheckpoint(currentNextPoint);
-                CreateCheckpoint(middleTransform);
+                //CreateCheckpoint(middleTransform);
             }
 
             var randomRoll = Random.Range(0.0f, 1.0f + TurnRate);
@@ -83,7 +83,7 @@ public class Generator : MonoBehaviour
             var createdSegment = Instantiate(selectedSegment, transform);
           
             var inputTransform = createdSegment.transform.Find("InputPoint");
-            middleTransform = createdSegment.transform.Find("MiddlePoint");
+            //middleTransform = createdSegment.transform.Find("MiddlePoint");
             var outputTransform = createdSegment.transform.Find("OutputPoint");
 
             var rotationAngle = SetCorrectOrientation(currentNextPoint, createdSegment, inputTransform);
@@ -93,6 +93,7 @@ public class Generator : MonoBehaviour
             SavedObjects.Add(createdSegment);
         }
         CreateFinish(currentNextPoint);
+        FindObjectOfType<CameraTracking>().Init();
     }
 
     private GameObject[] CreateRandomSegmentTemplate(float randomRoll)
@@ -100,25 +101,12 @@ public class Generator : MonoBehaviour
         GameObject[] templateSetToUse;
         if (randomRoll <= TurnRate)
         {
-            if (turnDeviation == 0)
+            templateSetToUse = turnDeviation switch
             {
-                if (Random.Range(0.0f, 1.0f) < 0.5f)
-                {
-                    templateSetToUse = UseRightTurn();
-                }
-                else
-                {
-                    templateSetToUse = UseLeftTurn();
-                }
-            }
-            else if (turnDeviation < 0)
-            {
-                templateSetToUse = UseRightTurn();
-            }
-            else
-            {
-                templateSetToUse = UseLeftTurn();
-            }
+                0 => Random.Range(0.0f, 1.0f) < 0.5f ? UseRightTurn() : UseLeftTurn(),
+                < 0 => UseRightTurn(),
+                _ => UseLeftTurn()
+            };
         }
         else
         {

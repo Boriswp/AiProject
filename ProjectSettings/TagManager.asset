@@ -10,6 +10,8 @@ TagManager:
   - CheckPoint
   - Start
   - ground
+  - BotGA
+  - Camera
   layers:
   - Default
   - TransparentFX
