@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Generator : MonoBehaviour
 {
@@ -26,7 +28,16 @@ public class Generator : MonoBehaviour
     public List<GameObject> SavedObjects = new();
     private int turnDeviation = 0;
 
+    public bool autoStart = true;
 
+
+    private void Awake()
+    {
+        if (autoStart)
+        {
+            GenerateTrack();
+        }
+    }
 
     private GameObject[] UseRightTurn()
     {
@@ -93,7 +104,11 @@ public class Generator : MonoBehaviour
             SavedObjects.Add(createdSegment);
         }
         CreateFinish(currentNextPoint);
-        FindObjectOfType<CameraTracking>().Init();
+        var cameraMan = FindObjectOfType<CameraTracking>();
+        if (cameraMan != null)
+        {
+            cameraMan.Init();
+        }
     }
 
     private GameObject[] CreateRandomSegmentTemplate(float randomRoll)

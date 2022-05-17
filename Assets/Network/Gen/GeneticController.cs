@@ -80,7 +80,9 @@ public class GeneticController : MonoBehaviour
             if (!bots[i].winner) continue;
             bots[i].Save();
             Debug.Log("Learning End");
-            EditorApplication.ExitPlaymode();
+#if UNITY_EDITOR
+            EditorApplication.ExitPlaymode(); 
+#endif
         }
         Array.Sort(networks);
         for (int i = 0; i < populationSize / 2; i++)

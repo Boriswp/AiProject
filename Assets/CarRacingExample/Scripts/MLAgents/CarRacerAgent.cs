@@ -74,7 +74,7 @@ public class CarRacerAgent : Agent
         sensor.AddObservation(_steering);
     }
 
-    private void IncurOutOfRoadPenalty()
+    private void SetOutOfRoadPenalty()
     {
         if (!IsOnRoad() || collisionCount > MaxCollisionCount)
         {
@@ -84,7 +84,7 @@ public class CarRacerAgent : Agent
         }
     }
 
-    private void IncurBrakingPenalty(ActionBuffers actions)
+    private void SetBrakingPenalty(ActionBuffers actions)
     {
         if (actions.ContinuousActions[0] < 0 && _body.velocity.magnitude < 10)
         {
@@ -95,7 +95,7 @@ public class CarRacerAgent : Agent
     /// <summary>
     /// This gets reduced, or even becomes reward if sufficient speed is maintained
     /// </summary>
-    private float IncurLowSpeedPenalty()
+    private float SetLowSpeedPenalty()
     {
         float distanceThisFrame = Vector3.Distance(positionLastUpdate, transform.position);
 
@@ -120,9 +120,9 @@ public class CarRacerAgent : Agent
             EndEpisode();
         }
 
-        IncurOutOfRoadPenalty();
-        IncurBrakingPenalty(actions);
-        float movementScore = IncurLowSpeedPenalty();
+        SetOutOfRoadPenalty();
+        SetBrakingPenalty(actions);
+        float movementScore = SetLowSpeedPenalty();
 
         movementScore += TickPenalty;
 

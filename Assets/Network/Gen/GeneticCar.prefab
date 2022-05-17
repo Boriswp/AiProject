@@ -15548,7 +15548,7 @@ GameObject:
   - component: {fileID: 5296578678108906946}
   - component: {fileID: 6872310443710887748}
   m_Layer: 8
-  m_Name: Car_For_TrainGenetic
+  m_Name: GeneticCar
   m_TagString: BotGA
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
