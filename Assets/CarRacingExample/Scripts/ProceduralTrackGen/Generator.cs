@@ -28,7 +28,7 @@ public class Generator : MonoBehaviour
     public List<GameObject> SavedObjects = new();
     private int turnDeviation = 0;
 
-    public bool autoStart = true;
+    public bool autoStart = false;
 
 
     private void Awake()
@@ -82,7 +82,7 @@ public class Generator : MonoBehaviour
             if (IsCheckpointPlace(i, tillCheckpointCounter))
             {
                 tillCheckpointCounter = CreateCheckpoint(currentNextPoint);
-                //CreateCheckpoint(middleTransform);
+                CreateCheckpoint(middleTransform);
             }
 
             var randomRoll = Random.Range(0.0f, 1.0f + TurnRate);
@@ -94,7 +94,7 @@ public class Generator : MonoBehaviour
             var createdSegment = Instantiate(selectedSegment, transform);
           
             var inputTransform = createdSegment.transform.Find("InputPoint");
-            //middleTransform = createdSegment.transform.Find("MiddlePoint");
+            middleTransform = createdSegment.transform.Find("MiddlePoint");
             var outputTransform = createdSegment.transform.Find("OutputPoint");
 
             var rotationAngle = SetCorrectOrientation(currentNextPoint, createdSegment, inputTransform);

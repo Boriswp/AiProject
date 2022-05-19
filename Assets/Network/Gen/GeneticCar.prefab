@@ -15729,7 +15729,7 @@ MonoBehaviour:
   rotation: 6
   raycastMask:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
   network:
     fitness: 0
   distance: 100

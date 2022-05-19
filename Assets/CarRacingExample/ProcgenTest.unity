@@ -1654,7 +1654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2818684159667017345, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.619
       objectReference: {fileID: 0}
     - target: {fileID: 2835060640998087349, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -1707,7 +1707,7 @@ PrefabInstance:
     - target: {fileID: 4678977352040191573, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 87d7f3de07945c342a6d8b601e9d1814, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: dee6f55100274134da97872cd579c847, type: 3}
     - target: {fileID: 4678977352040191573, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
       propertyPath: m_InferenceDevice
       value: 1
@@ -1723,6 +1723,14 @@ PrefabInstance:
     - target: {fileID: 4678977352040191573, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
       propertyPath: m_BrainParameters.numStackedVectorObservations
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214785825701351174, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214785825701351174, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.147
       objectReference: {fileID: 0}
     - target: {fileID: 7214785826629152808, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
       propertyPath: m_Name
@@ -1742,7 +1750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7214785826629152809, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 181.31
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7214785826629152809, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1782,7 +1790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7214785827000472538, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7214785827215546477, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
       propertyPath: RampRate
@@ -1798,7 +1806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7214785827215546477, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
       propertyPath: TrackLength
-      value: 64
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7214785827215546477, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
       propertyPath: CheckpointEveryNSegments
@@ -1834,7 +1842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8928411348385990412, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
       propertyPath: m_RayLayerMask.m_Bits
-      value: 819
+      value: 827
       objectReference: {fileID: 0}
     - target: {fileID: 8928411348385990412, guid: d74523e0f51c3ad4c8164c400c882120, type: 3}
       propertyPath: m_DetectableTags.Array.size
@@ -1874,7 +1882,7 @@ MonoBehaviour:
   m_RayLength: 18
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 819
+    m_Bits: 795
   m_ObservationStacks: 2
   rayHitColor: {r: 0.30691457, g: 1, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}

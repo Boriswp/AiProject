@@ -54,14 +54,13 @@ public class GeneticController : MonoBehaviour
             {
                 SortNetworks();
                 epochCount++;
-                Debug.Log("Learning Epochs: "+epochCount);
             }
             for (int i = 0; i < bots.Count; i++)
             {
                 Destroy(bots[i].gameObject);
             }
         }
-
+        Debug.Log("Learning Epochs: "+epochCount);
         bots = new List<Bot>();
         for (int i = 0; i < populationSize; i++)
         {

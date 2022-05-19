@@ -1,10 +1,16 @@
+using System;
 using UnityEngine;
 
 public class CameraTracking : MonoBehaviour
 {
     public GameObject[] cameras;
     private int curr=0;
-    
+
+    private void Awake()
+    {
+       Init();
+    }
+
     public void Init()
     {
         cameras = GameObject.FindGameObjectsWithTag("Camera");
@@ -18,14 +24,17 @@ public class CameraTracking : MonoBehaviour
 
     public void OnButtonClick(bool next)
     {
+
         if (next)
         {
+            Debug.Log("next");
             if(cameras.Length<=curr-1) return;
             curr++;
             OnNextCameraClick();
         }
         else
         {
+            Debug.Log("prev");
             if(0>=curr) return;
             curr--;
             OnPreviousCameraClick();
